@@ -12,7 +12,7 @@ const Shipment = () => {
     const [productDetails, setProductDetails] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://secure-harbor-36979.herokuapp.com/product/${id}`)
         .then(res => res.json())
         .then(data => setProductDetails(data))
     }, [id]);
@@ -20,7 +20,7 @@ const Shipment = () => {
     const onSubmit = data => {
         const orderDetails = {...loggedInUser, products: productDetails, shipment: data, orderTime: new Date()};
     
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://secure-harbor-36979.herokuapp.com/addOrder', {
           method: 'POST',
           headers: {'Content-Type' : 'application/json'},
           body: JSON.stringify(orderDetails)

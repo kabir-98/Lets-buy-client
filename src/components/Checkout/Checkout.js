@@ -7,7 +7,7 @@ const Checkout = () => {
     const history = useHistory();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://secure-harbor-36979.herokuapp.com/product/${id}`)
         .then(res => res.json())
         .then(data => setProduct(data))
     }, [id]);

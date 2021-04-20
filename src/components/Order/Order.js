@@ -12,7 +12,7 @@ const Order = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orderList?email=${loggedInUser.email}`, {
+        fetch(`https://secure-harbor-36979.herokuapp.com/orderList?email=${loggedInUser.email}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

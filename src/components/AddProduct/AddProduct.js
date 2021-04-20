@@ -13,7 +13,7 @@ const AddProduct = () => {
             price: data.price,
             imageURL: imageURL
         };
-        const url = `http://localhost:5000/addProduct`;
+        const url = `https://secure-harbor-36979.herokuapp.com/addProduct`;
 
         fetch(url, {
           method: 'POST', 

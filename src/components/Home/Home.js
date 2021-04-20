@@ -11,7 +11,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/productList')
+        fetch('https://secure-harbor-36979.herokuapp.com/productList')
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
